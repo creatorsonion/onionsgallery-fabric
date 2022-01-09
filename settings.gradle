@@ -9,4 +9,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "paintingmod"
+rootProject.name = "paintingmod-fabric"
