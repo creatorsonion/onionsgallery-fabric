@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package net.creatorsonion.paintingmod.entity.decoration.painting;
 
 import net.creatorsonion.paintingmod.entity.PMEntityRegistry;
