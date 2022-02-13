@@ -13,10 +13,12 @@ public class PaintingMod implements ModInitializer {
     public static final String MOD_ID   = "paintingmod";
     public static final String MOD_NAME = "Painting Mod";
 
-	public static final String[] MOTIVES = {"fate", "glare", "tentacles", "bold_and_brash",
+	public static final String[] MOTIVES = {
+		"fate", "glare", "tentacles", "bold_and_brash",
 		"paradoxical", "forgotten_nostalgia", "melon", "fantasy_of_pearce",
 		"ramen_and_rice", "poker_night", "steven", "ravenous",
-		"portal_sunset", "explorer", "jebie"};
+		"portal_sunset", "explorer", "jebie"
+	};
 
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 

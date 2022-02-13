@@ -1,7 +1,6 @@
 package net.creatorsonion.paintingmod.item;
 
 import net.creatorsonion.paintingmod.PaintingMod;
-import net.creatorsonion.paintingmod.entity.PMEntityRegistry;
 import net.creatorsonion.paintingmod.inventory.PMItemGroupRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EntityType;
