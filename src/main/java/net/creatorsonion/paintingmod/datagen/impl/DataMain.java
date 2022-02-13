@@ -3,7 +3,12 @@ package net.creatorsonion.paintingmod.datagen.impl;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import net.creatorsonion.paintingmod.datagen.impl.provider.*;
+import net.creatorsonion.paintingmod.datagen.impl.provider.AdvancementProvider;
+import net.creatorsonion.paintingmod.datagen.impl.provider.ItemModelProvider;
+import net.creatorsonion.paintingmod.datagen.impl.provider.LootTableProvider;
+import net.creatorsonion.paintingmod.datagen.impl.provider.RecipeProvider;
+import net.creatorsonion.paintingmod.datagen.impl.provider.StateModelProvider;
+import net.creatorsonion.paintingmod.datagen.impl.provider.TagProvider;
 import net.minecraft.data.DataGenerator;
 
 import java.io.IOException;

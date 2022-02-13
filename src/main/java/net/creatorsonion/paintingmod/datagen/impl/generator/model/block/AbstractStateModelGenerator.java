@@ -1,6 +1,10 @@
 package net.creatorsonion.paintingmod.datagen.impl.generator.model.block;
 
-import net.creatorsonion.paintingmod.datagen.impl.generator.model.*;
+import net.creatorsonion.paintingmod.datagen.impl.generator.model.AbstractModelGenerator;
+import net.creatorsonion.paintingmod.datagen.impl.generator.model.InheritingModelGen;
+import net.creatorsonion.paintingmod.datagen.impl.generator.model.ModelGen;
+import net.creatorsonion.paintingmod.datagen.impl.generator.model.StateGen;
+import net.creatorsonion.paintingmod.datagen.impl.generator.model.StateModelInfo;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
