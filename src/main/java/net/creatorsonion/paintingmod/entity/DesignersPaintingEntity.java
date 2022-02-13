@@ -1,4 +1,4 @@
-package net.creatorsonion.paintingmod.entity.decoration.painting;
+package net.creatorsonion.paintingmod.entity;
 
 import net.creatorsonion.paintingmod.entity.PMEntityRegistry;
 import net.minecraft.entity.EntityType;

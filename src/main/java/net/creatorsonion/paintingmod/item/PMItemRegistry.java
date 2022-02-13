@@ -1,7 +1,6 @@
 package net.creatorsonion.paintingmod.item;
 
 import net.creatorsonion.paintingmod.PaintingMod;
-import net.creatorsonion.paintingmod.inventory.PMItemGroupRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
@@ -12,7 +11,7 @@ import net.minecraft.util.registry.Registry;
 public class PMItemRegistry {
     private static final FabricItemSettings PAINTING_SETTINGS =
             new FabricItemSettings()
-                    .group(PMItemGroupRegistry.ITEM_GROUP)
+                    .group(PaintingMod.ITEM_GROUP)
                     .maxCount(16)
                     .rarity(Rarity.RARE);
 
