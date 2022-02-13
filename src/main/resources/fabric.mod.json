@@ -1,51 +1,47 @@
 {
   "schemaVersion": 1,
 
-  "id": "paintingmod",
+  "id": "onionsgallery",
   "version": "${version}",
   "license": [
     "MIT (Code)",
     "All Rights Reserved (Assets)"
   ],
 
-  "name": "Painting Mod",
-  "icon": "assets/paintingmod/icon.png",
+  "name": "Onions' Gallery",
+  "icon": "assets/onionsgallery/icon.png",
   "description": "",
 
-  "authors": [
-    "Pack Creators' Onion"
+  "authors": [ "Pack Creators' Onion" ],
+  "contributors": ["",
+    "Cocoon",
+    "Andante"
   ],
 
   "contact": {
     "homepage": "https://creatorsonion.net",
-    "sources": "https://github.com/creatorsonion/paintingmod",
-    "issues": "https://github.com/creatorsonion/paintingmod/issues"
+    "sources": "https://github.com/creatorsonion/onionsgallery",
+    "issues": "https://github.com/creatorsonion/onionsgallery/issues"
   },
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.creatorsonion.paintingmod.PaintingMod"
-    ]
+    "main": [ "net.creatorsonion.onionsgallery.OnionsGallery" ],
+    "toymaker": [ "net.creatorsonion.onionsgallery.data.OnionsGalleryToymaker" ]
   },
-  "mixins": [
-    "paintingmod.mixins.json",
-    "datagen.mixins.json"
-  ],
-  "accessWidener": "paintingmod.accesswidener",
+  "mixins": [ "onionsgallery.mixins.json" ],
 
   "depends": {
     "java": ">=17",
     "minecraft": ">=1.18",
-    "fabricloader": ">=0.12.12",
-    "fabric": "*"
+    "fabricloader": ">=0.13",
+    "fabric": ">=0.46"
   },
 
   "custom": {
     "modmenu": {
-      "badges": [],
       "links": {
-        "mod.paintingmod.contact.discord": "https://discord.creatorsonion.net"
+        "mod.onionsgallery.contact.discord": "https://discord.creatorsonion.net"
       }
     }
   }
