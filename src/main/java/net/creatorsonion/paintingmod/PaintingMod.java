@@ -25,11 +25,12 @@ public class PaintingMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Initializing {}", MOD_NAME);
 
-		// TODO: Use a loop for these
-		Reflection.initialize(PMPaintingMotive.class);
-		Reflection.initialize(PMItemGroupRegistry.class);
-		Reflection.initialize(PMItemRegistry.class);
-		Reflection.initialize(PMEntityRegistry.class);
+		Reflection.initialize(
+			PMPaintingMotive.class,
+			PMItemGroupRegistry.class,
+			PMItemRegistry.class,
+			PMEntityRegistry.class
+		);
 
 		LOGGER.info("Initialized {}", MOD_NAME);
 	}
