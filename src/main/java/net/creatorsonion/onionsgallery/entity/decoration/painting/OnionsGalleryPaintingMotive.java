@@ -5,6 +5,8 @@ import net.minecraft.entity.decoration.painting.PaintingMotive;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import java.util.List;
+
 public class OnionsGalleryPaintingMotive extends PaintingMotive {
     public static final PaintingMotive FATE = register("fate", 64, 32);
     public static final PaintingMotive GLARE = register("glare", 64, 64);
@@ -28,5 +30,12 @@ public class OnionsGalleryPaintingMotive extends PaintingMotive {
 
     private static PaintingMotive register(String id, int width, int height) {
         return Registry.register(Registry.PAINTING_MOTIVE, new Identifier(OnionsGallery.MOD_ID, id), new OnionsGalleryPaintingMotive(width, height));
+    }
+
+    public static List<OnionsGalleryPaintingMotive> getAll() {
+        return Registry.PAINTING_MOTIVE.stream()
+                                       .filter(OnionsGalleryPaintingMotive.class::isInstance)
+                                       .map(OnionsGalleryPaintingMotive.class::cast)
+                                       .toList();
     }
 }

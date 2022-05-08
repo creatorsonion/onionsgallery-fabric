@@ -24,7 +24,7 @@ public class OnionsGallery implements ModInitializer {
 		FabricItemGroupBuilder.create(new Identifier(MOD_ID, "item_group"))
 							  .icon(() -> new ItemStack(OnionsGalleryItems.DESIGNERS_PAINTING))
 							  .appendItems(stacks -> {
-								  for (PaintingMotive motive : Registry.PAINTING_MOTIVE.stream().filter(OnionsGalleryPaintingMotive.class::isInstance).toList()) {
+								  for (PaintingMotive motive : OnionsGalleryPaintingMotive.getAll()) {
 									  NbtCompound nbt = new NbtCompound();
 
 									  NbtCompound nbtEntityTag = new NbtCompound();
