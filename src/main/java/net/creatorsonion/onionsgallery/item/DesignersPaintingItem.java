@@ -19,8 +19,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class DesignersPaintingItem extends DecorationItem {
-    public DesignersPaintingItem(EntityType<? extends AbstractDecorationEntity> entityType, Settings settings) {
-        super(entityType, settings);
+    public DesignersPaintingItem(EntityType<? extends AbstractDecorationEntity> type, Settings settings) {
+        super(type, settings);
     }
 
     @Environment(EnvType.CLIENT)
