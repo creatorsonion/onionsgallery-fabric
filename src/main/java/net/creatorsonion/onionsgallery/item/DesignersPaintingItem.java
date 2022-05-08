@@ -1,7 +1,10 @@
 package net.creatorsonion.onionsgallery.item;
 
 import net.creatorsonion.onionsgallery.OnionsGallery;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.AbstractDecorationEntity;
 import net.minecraft.item.DecorationItem;
@@ -20,10 +23,12 @@ public class DesignersPaintingItem extends DecorationItem {
         super(entityType, settings);
     }
 
+    @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext ctx) {
         NbtCompound nbt = Optional.ofNullable(stack.getNbt()).orElseGet(NbtCompound::new);
         NbtCompound entityNbt = nbt.getCompound("EntityTag");
-        tooltip.add(new TranslatableText("painting.%s.%s".formatted(OnionsGallery.MOD_ID, entityNbt.getString("Motive"))).formatted(Formatting.GRAY));
+        String key = "painting.%s.%s".formatted(OnionsGallery.MOD_ID, entityNbt.getString("Motive"));
+        if (I18n.hasTranslation(key)) tooltip.add(new TranslatableText(key).formatted(Formatting.GRAY));
     }
 }
