@@ -11,7 +11,6 @@ import net.minecraft.item.DecorationItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
@@ -29,6 +28,6 @@ public class DesignersPaintingItem extends DecorationItem {
         NbtCompound nbt = Optional.ofNullable(stack.getNbt()).orElseGet(NbtCompound::new);
         NbtCompound entityNbt = nbt.getCompound("EntityTag");
         String key = "painting.%s.%s".formatted(OnionsGallery.MOD_ID, entityNbt.getString("Motive"));
-        if (I18n.hasTranslation(key)) tooltip.add(new TranslatableText(key).formatted(Formatting.GRAY));
+        if (I18n.hasTranslation(key)) tooltip.add(Text.translatable(key).formatted(Formatting.GRAY));
     }
 }

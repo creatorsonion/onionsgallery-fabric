@@ -9,13 +9,12 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class OnionsGalleryEntityType {
-    public static final EntityType<DesignersPaintingEntity> DESIGNERS_PAINTING = register(
-                "designers_painting",
-                FabricEntityTypeBuilder.<DesignersPaintingEntity>create(SpawnGroup.MISC, DesignersPaintingEntity::new)
-                        .dimensions(EntityDimensions.fixed(0.5f, 0.5f))
-                        .trackRangeBlocks(10)
-                        .trackedUpdateRate(Integer.MAX_VALUE)
+public interface OnionsGalleryEntityType {
+    EntityType<DesignersPaintingEntity> DESIGNERS_PAINTING = register("designers_painting",
+        FabricEntityTypeBuilder.<DesignersPaintingEntity>create(SpawnGroup.MISC, DesignersPaintingEntity::new)
+                               .dimensions(EntityDimensions.fixed(0.5f, 0.5f))
+                               .trackRangeBlocks(10)
+                               .trackedUpdateRate(Integer.MAX_VALUE)
     );
 
     private static <T extends Entity> EntityType<T> register(String id, FabricEntityTypeBuilder<T> entityType) {

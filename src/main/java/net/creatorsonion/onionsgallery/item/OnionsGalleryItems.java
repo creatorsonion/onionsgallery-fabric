@@ -8,16 +8,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
-public class OnionsGalleryItems {
-    public static final Item DESIGNERS_PAINTING = register(
-        "designers_painting", new DesignersPaintingItem(
-            EntityType.PAINTING, new FabricItemSettings().group(OnionsGallery.ITEM_GROUP)
-                                                         .maxCount(16)
-                                                         .rarity(Rarity.RARE))
+public interface OnionsGalleryItems {
+    Item DESIGNERS_PAINTING = register("designers_painting", new DesignersPaintingItem(EntityType.PAINTING,
+        new FabricItemSettings().group(OnionsGallery.ITEM_GROUP)
+                                .maxCount(16)
+                                .rarity(Rarity.RARE))
     );
 
-    private static Item register(String path, Item item) {
-        Registry.register(Registry.ITEM, new Identifier(OnionsGallery.MOD_ID, path), item);
-        return item;
+    private static Item register(String id, Item item) {
+        return Registry.register(Registry.ITEM, new Identifier(OnionsGallery.MOD_ID, id), item);
     }
 }

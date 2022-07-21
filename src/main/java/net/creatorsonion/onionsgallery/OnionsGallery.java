@@ -2,11 +2,12 @@ package net.creatorsonion.onionsgallery;
 
 import com.google.common.reflect.Reflection;
 import net.creatorsonion.onionsgallery.entity.OnionsGalleryEntityType;
-import net.creatorsonion.onionsgallery.entity.decoration.painting.OnionsGalleryPaintingMotive;
+import net.creatorsonion.onionsgallery.entity.decoration.painting.OnionsGalleryPaintingVariant;
+import net.creatorsonion.onionsgallery.entity.decoration.painting.OnionsGalleryPaintingVariants;
 import net.creatorsonion.onionsgallery.item.OnionsGalleryItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.entity.decoration.painting.PaintingMotive;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
@@ -24,11 +25,11 @@ public class OnionsGallery implements ModInitializer {
 		FabricItemGroupBuilder.create(new Identifier(MOD_ID, "item_group"))
 							  .icon(() -> new ItemStack(OnionsGalleryItems.DESIGNERS_PAINTING))
 							  .appendItems(stacks -> {
-								  for (PaintingMotive motive : OnionsGalleryPaintingMotive.getAll()) {
+								  for (PaintingVariant variant : OnionsGalleryPaintingVariants.getAll()) {
 									  NbtCompound nbt = new NbtCompound();
 
 									  NbtCompound nbtEntityTag = new NbtCompound();
-									  Identifier id = Registry.PAINTING_MOTIVE.getId(motive);
+									  Identifier id = Registry.PAINTING_VARIANT.getId(variant);
 									  nbtEntityTag.putString("Motive", id.toString());
 									  nbt.put("EntityTag", nbtEntityTag);
 
@@ -45,7 +46,7 @@ public class OnionsGallery implements ModInitializer {
 		LOGGER.info("Initializing {}", MOD_NAME);
 
 		Reflection.initialize(
-			OnionsGalleryPaintingMotive.class,
+			OnionsGalleryPaintingVariants.class,
 			OnionsGalleryItems.class,
 			OnionsGalleryEntityType.class
 		);

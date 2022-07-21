@@ -20,22 +20,22 @@
 
   "contact": {
     "homepage": "https://creatorsonion.net",
-    "sources": "https://github.com/creatorsonion/onionsgallery",
-    "issues": "https://github.com/creatorsonion/onionsgallery/issues"
+    "sources": "https://github.com/creatorsonion/onionsgallery-fabric",
+    "issues": "https://github.com/creatorsonion/onionsgallery-fabric/issues"
   },
 
   "environment": "*",
   "entrypoints": {
     "main": [ "net.creatorsonion.onionsgallery.OnionsGallery" ],
-    "toymaker": [ "net.creatorsonion.onionsgallery.data.OnionsGalleryToymaker" ]
+    "fabric-datagen": [ "net.creatorsonion.onionsgallery.data.OnionsGalleryDataGenerator" ]
   },
   "mixins": [ "onionsgallery.mixins.json" ],
 
   "depends": {
     "java": ">=17",
-    "minecraft": ">=1.18",
-    "fabricloader": ">=0.13",
-    "fabric": ">=0.51"
+    "minecraft": ">=1.19",
+    "fabricloader": ">=0.14",
+    "fabric": ">=0.57"
   },
 
   "custom": {
