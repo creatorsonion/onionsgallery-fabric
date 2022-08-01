@@ -1,8 +1,8 @@
 package net.creatorsonion.onionsgallery;
 
 import com.google.common.reflect.Reflection;
+import net.creatorsonion.onionsgallery.client.OnionsGalleryClient;
 import net.creatorsonion.onionsgallery.entity.OnionsGalleryEntityType;
-import net.creatorsonion.onionsgallery.entity.decoration.painting.OnionsGalleryPaintingVariant;
 import net.creatorsonion.onionsgallery.entity.decoration.painting.OnionsGalleryPaintingVariants;
 import net.creatorsonion.onionsgallery.item.OnionsGalleryItems;
 import net.fabricmc.api.ModInitializer;
@@ -30,7 +30,7 @@ public class OnionsGallery implements ModInitializer {
 
 									  NbtCompound nbtEntityTag = new NbtCompound();
 									  Identifier id = Registry.PAINTING_VARIANT.getId(variant);
-									  nbtEntityTag.putString("Motive", id.toString());
+									  nbtEntityTag.putString("variant", id.toString());
 									  nbt.put("EntityTag", nbtEntityTag);
 
 									  ItemStack item = new ItemStack(OnionsGalleryItems.DESIGNERS_PAINTING);
@@ -48,7 +48,8 @@ public class OnionsGallery implements ModInitializer {
 		Reflection.initialize(
 			OnionsGalleryPaintingVariants.class,
 			OnionsGalleryItems.class,
-			OnionsGalleryEntityType.class
+			OnionsGalleryEntityType.class,
+				OnionsGalleryClient.class
 		);
 
 		LOGGER.info("Initialized {}", MOD_NAME);

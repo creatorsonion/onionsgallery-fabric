@@ -27,6 +27,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [ "net.creatorsonion.onionsgallery.OnionsGallery" ],
+    "client": ["net.creatorsonion.onionsgallery.client.OnionsGalleryClient"],
     "fabric-datagen": [ "net.creatorsonion.onionsgallery.data.OnionsGalleryDataGenerator" ]
   },
   "mixins": [ "onionsgallery.mixins.json" ],

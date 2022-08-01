@@ -27,7 +27,7 @@ public class DesignersPaintingItem extends DecorationItem {
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext ctx) {
         NbtCompound nbt = Optional.ofNullable(stack.getNbt()).orElseGet(NbtCompound::new);
         NbtCompound entityNbt = nbt.getCompound("EntityTag");
-        String key = "painting.%s.%s".formatted(OnionsGallery.MOD_ID, entityNbt.getString("Motive"));
+        String key = "painting.%s.%s".formatted(OnionsGallery.MOD_ID, entityNbt.getString("variant"));
         if (I18n.hasTranslation(key)) tooltip.add(Text.translatable(key).formatted(Formatting.GRAY));
     }
 }

@@ -9,7 +9,7 @@ import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.World;
 
 public class DesignersPaintingEntity extends PaintingEntity {
-    public DesignersPaintingEntity(EntityType<? extends PaintingEntity> entityType, World world) {
+    public DesignersPaintingEntity(EntityType<? extends DesignersPaintingEntity> entityType, World world) {
         super(entityType, world);
     }
 
